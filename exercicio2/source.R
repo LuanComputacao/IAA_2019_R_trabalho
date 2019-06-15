@@ -75,11 +75,13 @@ with(dataset, points(x = predicoes.rna, pch = 19, cex = 0.5, col="purple"))
 dev.copy(png,'metodos.png')
 dev.off()
 
-# Gráfico de correlações
+# Gráfico em barra de correlações
 variacao = max(correlacoes) - min(correlacoes)
 piso = min(correlacoes) - variacao
 representacao_ampliada = (correlacoes - piso) * 100
 barplot(as.matrix(representacao_ampliada), beside = TRUE)
+dev.copy(png,'correlacoes.png')
+dev.off()
 
 
 # Gráfico de comparação das correlações do melhor método atual
