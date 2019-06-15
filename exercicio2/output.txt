@@ -4,9 +4,8 @@
 [1] " - Neural Network"
 [1] "Correlações dos métodos utilizados"
          rf      nnet svmRadial      alom
-1 0.9267874 0.9408202 0.9253999 0.9244904
+1 0,9544681 0,9623416 0,9630521 0,9558808
 [1] "Método com melhor correlação:"
-[1] "nnet"
+[1] "svmRadial"
 [1] "Correlação do método escolhido com toda a amostra de dados"
-          [,1]
-[1,] 0.9426489
+[1] 0,9656641
