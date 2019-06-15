@@ -17,13 +17,16 @@ Os dados estão em ordem aleatória e certas linhas de dados foram removidas, po
 
 O banco de dados se encontra no pacote mlbench e é completo (não possui dados faltantes).
 
-Tarefas:
+### Tarefas:
 
     1. Treine modelos RandomForest, SVM e RNA para predição destes dados. 
     2. Escolha o melhor modelo com base em suas matrizes de confusão. 
     3. Treine o modelo final com todos os dados e faça a predição na base completa. 
     4. Analise o resultado.
     5. Salve este modelo final 
+
+### Resolução
+* [Texto descritivo](./exercicio/README.md)
 
 ## 2 Estimativa de Volumes de Árvores
 
