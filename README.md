@@ -26,7 +26,7 @@ O banco de dados se encontra no pacote mlbench e é completo (não possui dados 
     5. Salve este modelo final 
 
 ### Resolução
-* [Texto descritivo](./exercicio/README.md)
+* [Texto descritivo](./exercicio1/README.md)
 
 ## 2 Estimativa de Volumes de Árvores
 
