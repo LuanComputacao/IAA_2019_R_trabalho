@@ -62,14 +62,25 @@ melhor_cor <- cor(dataset$VOL, melhor_predicao)
 # -----------------------------------------------------------------------------
 
 maior_predicao = max(predicoes.rf)
+
 # Gráfico de comparação das correlações dos métodos
-plot(teste$VOL, pch = 19, cex = 0.5, ylab="Predições", main = "Predições dos métodos")
+ymax = max(max(predicoes.rf), max(predicoes.alom), max(predicoes.svm), max(predicoes.rna))
+xgrid_metodos = expand.grid(X1=0:length(teste$VOL),X2=seq(min(c(min(melhor_predicao),min(dataset$VOL))), ymax, 0.005))
+plot(xgrid_metodos, pch = 20, cex = 0.1, col = "grey", main = paste("Comparação entre amostra e predições para todos os métodos"), ylab="Volume", xlab = "Distribuição de amostras")
+with(dataset, points(x = treinamento$VOL, pch = 19, cex = 1, col="grey"))
 with(dataset, points(x = predicoes.rf, pch = 19, cex = 0.5, col="red"))
 with(dataset, points(x = predicoes.alom, pch = 19, cex = 0.5, col="green"))
 with(dataset, points(x = predicoes.svm, pch = 19, cex = 0.5, col = "blue"))
-with(dataset, points(x = predicoes.nnet, pch = 19, cex = 0.5, col="purple"))
+with(dataset, points(x = predicoes.rna, pch = 19, cex = 0.5, col="purple"))
 dev.copy(png,'metodos.png')
 dev.off()
+
+# Gráfico de correlações
+variacao = max(correlacoes) - min(correlacoes)
+piso = min(correlacoes) - variacao
+representacao_ampliada = (correlacoes - piso) * 100
+barplot(as.matrix(representacao_ampliada), beside = TRUE)
+
 
 # Gráfico de comparação das correlações do melhor método atual
 xgrid = expand.grid(X1=volumes$NR,X2=seq(0, max(c(max(melhor_predicao),max(dataset$VOL))), 0.01))
@@ -83,8 +94,6 @@ dev.off()
 # -----------------------------------------------------------------------------
 # OUTPUTS
 # -----------------------------------------------------------------------------
-
-
 sink("output.txt")
 print("Comparação de correlações entre os métodos")
 print(" - Random Forest")
