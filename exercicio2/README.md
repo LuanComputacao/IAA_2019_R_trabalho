@@ -38,7 +38,7 @@ Tomando os resultados obtidos pelas predições de cada um dos modelos treinados
 `Figura 1 - Dados de teste e predições realizadas pelos métodos, para cada amostra; Cores: preto = amostra, vermelho = rf, verde = alom, azul = svm, purpura = nnet`
 
 
-A partir do cálculo da correlação dos resultados preditos pelos modelos, é possível avaliar qual modelo possui uma acurácia melhor para o cálculo do volume das árvores. Esta comparação é demonstrada no gráfico da _Figura 2_. Sendo que as dimensões foram ajustadas e deslocadas, para melhor visualização da diferença entre os métodos, seguindo o método à seguir.
+A partir do cálculo da correlação dos resultados preditos pelos modelos, é possível avaliar qual modelo possui uma acurácia melhor para o cálculo do volume das árvores. Esta comparação é demonstrada no gráfico da _Figura 2_. Sendo que as dimensões foram ajustadas e deslocadas, para melhor visualização da diferença entre os métodos, seguindo o algoritmo à seguir.
 ```
 v = maxCor - minCor
 p = minCor - v
@@ -50,7 +50,7 @@ maxCor: valor máximo das correlações
 minCor: valor mínimo das c
 orrelações
 v: variação entre as correlações 
-p: piso, valor mínimo para plotagem no gráfico
+p: piso sendo o novo valor para y = 0
 C: matriz das correlações
 K: matriz com recorte dos valores de correlações
 r: ampliação dos valores para melhor exibição
