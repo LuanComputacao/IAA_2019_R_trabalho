@@ -23,11 +23,16 @@ Após ter os modelos treinados, faz uma comparação para verificar qual modelo 
 
 Logo em seguida guarda os gráficos gerados, para comparação entre os métodos. E, então, salva os outputs para análise em um arquivo.
 
+## Arquivos fonte:
+* [Volumes.csv](./Volumes.csv): Dados de amostragem para treinamento e teste
+* [source.R](./source.R): Código fonte
+
 ## Arquivos gerados:
- * `modelos.png`: comparação entre o resultado das predições realizadas pelos modelos, e a amostra de dados
- * `correlacoes.png`: gráfico de barras exibindo a relação entre as correlações das predições calculadas
- * `metodo_com_melhor_correlacao.png`: comparação entre as predições do método selecionado e a amostra de dados
- * `output.txt`: saída dos dados para análise da veracidade
+ * [modelos.png](./modelos.png): comparação entre o resultado das predições realizadas pelos modelos, e a amostra de dados
+ * [correlacoes.png](./correlacoes.png): gráfico de barras exibindo a relação entre as correlações das predições calculadas
+ * [metodo_com_melhor_correlacao.png](./metodo_com_melhor_correlacao.png): comparação entre as predições do método selecionado e a amostra de dados
+ * [output.txt](./output.txt): saída dos dados para análise da veracidade
+ * [melhor_modelo_atual.RData](./melhor_modelo_atual.RData): modelo gerado pela seleção de melhor método
 
 ## Resultados obtidos
 À partir da massa de dados com 100 elementos de amostragem de relações entre as medições e volumes das árvores, tomando-se 80% para treinamento e 20% para teste de predição, o algoritmo, após treinar  os modelos dos métodos propostos, disponibilizou resultados que possibilitou visualizar o melhor método para o problema proposto.
