@@ -3,6 +3,10 @@
 Universidade Federal do Paraná
 Inteligência Artificial Aplicada
 IAA004 - 2019 - Linguagem R
+Contribuidores:
+Anonymous @luancomputacao
+Julio Maistrovicz @juliomaister
+Renan Nelsen @renannelsen
 ```
 
 ## 1 Pesquisa com Dados de Satélite (Satellite)
